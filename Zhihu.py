@@ -34,7 +34,7 @@ def find_website():
 		# 模拟执行向下滚动操作
 		browser.execute_script('window.scrollTo(0,document.body.scrollHeight);')
 
-		# 获取前50条相话题
+		# 获取前50条相关话题
 		item_number = browser.evaluate_script('document.querySelectorAll(".AnswerItem").length;')
 		while item_number < 50:
 			browser.execute_script('window.scrollTo(0,document.body.scrollHeight);')
@@ -42,6 +42,19 @@ def find_website():
 		print('current item number: {}'.format(item_number))
 
 		# Do something else whatever you want
+		page = browser.html
+
+		# 建立缓存文件(夹)
+		folder = 'Zhihu'
+		filename = 'zhihu-python.html'
+		if not os.path.exists(folder):
+			os.makedirs(folder)
+
+		path = os.path.join(folder, filename)
+
+		with open(path, 'wb') as f:
+			f.write(page.encode())
+		print('File has been cached.')
 
 def main():
 	add_chrome_webdriver()
