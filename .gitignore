@@ -1,0 +1,9 @@
+.idea
+__pycache__
+/.vscode/
+flask_session
+Douban
+MTime
+library/geckodriver.exe
+library/chromedriver.exe
+config.py
