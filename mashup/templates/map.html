@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.png') }}">
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <link href="/static/css/min.css" rel="stylesheet">
+    <script src="/static/js/ajax.js"></script>
+    <script src="https://cdn.bootcss.com/moment.js/2.19.2/moment.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.6&key=d221da2762af5ea2ba4ef04c81ba003b&plugin=AMap.ArrivalRange,AMap.Scale,AMap.Geocoder,AMap.Transfer,AMap.Autocomplete"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <style>
+    .amap-touch-toolbar .amap-zoomcontrol {
+        position:fixed !important;
+        left: 10px !important;
+        bottom: 50px !important;
+    }
+    .footer-section {
+        display: none;
+    }
+    </style>
+    <title>Map - ZN</title>
+</head>
+
+<body>
+<div id="root" class="page">
+    <div class="guest">
+        <div class="mashup">
+            <div id="container"></div>
+            <div class="control-panel">
+                <div class="control-entry">
+                    <label>工作地点：</label>
+                    <div class="control-input">
+                        <input id="work-location" class="input" type="text">
+                    </div>
+                </div>
+                <div class="control-entry">
+                    <label>通勤方式：</label>
+                    <div class="control-input vehicle">
+                        <input type="radio" class="bus-sub" value="SUBWAY,BUS" checked/>
+                        <a class="bus-sub">公交+地铁(1小时内)</a>
+                    </div>
+                </div>
+                <div class="control-entry">
+                    <label>选择数据源：</label>
+                    <div class="control-input source">
+                        <div class="select">
+                            <select id="id-source" name="source">
+                                <option selected="selected" disabled>
+                                    Pick a Site
+                                </option>
+                                <option value='gongyu' data-site="renting">
+                                    58品牌公寓
+                                </option>
+                                <option value='all' data-site="renting">
+                                    全部
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-entry">
+                    <label>数据更新：</label>
+                    <div class="control-input">
+                        <button class="update">更新房源</button>
+                        <button class="coordinate">修正坐标</button>
+                    </div>
+                </div>
+            </div>
+            <div id="transfer-panel"></div>
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="log-panel">
+                    <textarea id="id_log_area" class="textarea" rows="11" disabled></textarea>
+                </div>
+                <button class="modal-close" onclick="$('.modal').removeClass('is-active')">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/map.js"></script>
+<script src="/static/js/crawler.js"></script>
+</body>
+</html>
