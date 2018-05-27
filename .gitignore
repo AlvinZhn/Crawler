@@ -4,6 +4,7 @@ __pycache__
 flask_session
 Douban
 MTime
+Cache
 library/geckodriver.exe
 library/chromedriver.exe
 config.py
