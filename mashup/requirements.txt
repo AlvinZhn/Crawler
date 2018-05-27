@@ -1,0 +1,8 @@
+flask
+jinja2
+flask_session
+pyquery
+requests
+splinter
+selenium
+pymongo
