@@ -252,30 +252,8 @@ table th {
     color: #4d545d
 }
 
-@media screen and (min-width: 979px) {
-    .mashup .control-panel, .mashup #transfer-panel {
-        top: 20px
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 979px) {
-    .mashup #container {
-        top: 113px
-    }
-
-    .mashup .control-panel, .mashup #transfer-panel {
-        top: 133px
-    }
-}
-
-@media screen and (max-width: 769px) {
-    .mashup #container {
-        top: 80px
-    }
-
-    .mashup .control-panel, .mashup #transfer-panel {
-        top: 100px
-    }
+.mashup .control-panel, .mashup #transfer-panel {
+    top: 20px
 }
 
 .mashup .control-panel {
