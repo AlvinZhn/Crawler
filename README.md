@@ -14,9 +14,9 @@
 
 #### 无头浏览器爬取动态内容
 
-![avatar](https://wx3.sinaimg.cn/large/927e2755gy1frrhxisarcg22g218l7wi.gif)
+![gif](https://wx3.sinaimg.cn/large/927e2755gy1frrhxisarcg22g218l7wi.gif)
 
 
 #### 调用高德地图API标记房源信息
 
-![avatar](https://wx4.sinaimg.cn/large/927e2755gy1frrhxi2fupg21w113qu14.gif)
+![gif](https://ws1.sinaimg.cn/large/927e2755gy1frri0v0cfzg20sg0gme82.gif)
