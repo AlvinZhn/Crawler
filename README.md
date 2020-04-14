@@ -19,4 +19,4 @@
 
 #### 调用高德地图API标记房源信息
 
-![gif](http://ww1.sinaimg.cn/large/927e2755gy1gdtx5l2f9dg21w113qu14.gif)
+![gif](https://ws1.sinaimg.cn/large/927e2755gy1gdtx6ywm9tg21w113qu14.gif)
